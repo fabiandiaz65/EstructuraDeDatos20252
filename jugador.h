@@ -10,7 +10,7 @@ private:
     char simbolo; // 'X' o 'O'
 
 public:
-    jugador(const string& nombre, char simbolo);
+    jugador(const string& nombre, char simbolo); // Constructor
 
     string Nombrej() const;
     char Simboloj() const;

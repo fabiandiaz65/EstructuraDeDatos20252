@@ -1,8 +1,8 @@
 # include "juego.h"
-#include <iostream>
+# include <iostream>
 using namespace std;
 
-juego::juego(const string& nombre1, const string& nombre2) : jugador1(nombre1, 'X'), jugador2(nombre2, 'O') {}
+juego::juego(const std::string& nombre1, const std::string& nombre2) : jugador1(nombre1, 'X'), jugador2(nombre2, 'O') {} // Inicializa los jugadores con sus nombres y símbolos
 
 
 void juego::iniciarJuego() {

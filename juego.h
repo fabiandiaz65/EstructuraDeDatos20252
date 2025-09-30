@@ -4,6 +4,8 @@
 #include "tablero.h"
 #include "jugador.h"
 
+#include <string>
+
 class juego {
 private:
     tablero tablero;
@@ -11,7 +13,7 @@ private:
     jugador jugador2;
     
 public:
-    juego(const string& nombre1, const string& nombre2);
+    juego(const std::string& nombre1, const std::string& nombre2); // Constructor
     void iniciarJuego();
 };
 
