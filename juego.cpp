@@ -1,8 +1,28 @@
-# include "juego.h"
+#include "juego.h"
+#include "jugador.h"
 #include <iostream>
+
 using namespace std;
 
 juego::juego(const string& nombre1, const string& nombre2) : jugador1(nombre1, 'X'), jugador2(nombre2, 'O') {}
+
+
+GameState juego::captureState() const {
+  GameState s;
+  s.jugador_x = jugador.getX();
+  s.jugador_y = jugador.getY();
+  s.vida      = jugador.getVida();
+  s.nivel     = tablero.getNivelActual();
+  s.puntaje   = tablero.getPuntaje();
+  return s;
+}
+
+void juego::applyState(const GameState& s) {
+  jugador.setPos(s.jugador_x, s.jugador_y);
+  jugador.setVida(s.vida);
+  tablero.setNivel(s.nivel);
+  tablero.setPuntaje(s.puntaje);
+}
 
 
 void juego::iniciarJuego() {

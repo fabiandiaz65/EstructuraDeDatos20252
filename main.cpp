@@ -12,5 +12,7 @@ int main() {
     juego partida(nombre1, nombre2);
     partida.iniciarJuego();
 
+    
+
     return 0;
 }
