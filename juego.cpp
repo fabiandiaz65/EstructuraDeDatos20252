@@ -1,5 +1,6 @@
-# include "juego.h"
+#include "juego.h"
 #include <iostream>
+
 using namespace std;
 
 juego::juego(const string& nombre1, const string& nombre2) : jugador1(nombre1, 'X'), jugador2(nombre2, 'O') {}
@@ -13,8 +14,10 @@ void juego::iniciarJuego() {
         tablero.mostrarTablero();
         jugador actual = turnoJugador1 ? jugador1 : jugador2;
 
-        cout << actual.Nombrej() << " (" << actual.Simboloj() << "), ingresa fila y columna (0-2): ";
-        cin >> fila >> columna;
+        cout << actual.Nombrej() << " (" << actual.Simboloj() << "), ingresa fila (0-2): ";
+        cin >> fila; 
+        cout << actual.Nombrej() << " (" << actual.Simboloj() << "), ingresa columna (0-2): ";
+        cin >> columna;
         
         // Validar y marcar la casilla
         if (!tablero.marcarCasilla(fila, columna, actual.Simboloj())) {

@@ -9,15 +9,15 @@ tablero::tablero() {
 }
 
 void tablero::mostrarTablero() const {
-    cout << "  0 1 2\n";
+    cout << "    0    1   2\n";
     for (int i = 0; i < 3; ++i) {
         cout << i << " ";
         for (int j = 0; j < 3; ++j) {
-            cout << grid[i][j];
-            if (j < 2) cout << "|";
+            cout << " " << grid[i][j] << " ";
+            if (j < 2) cout << " |";
         }
         cout << "\n";
-        if (i < 2) cout << "  ---+---+---\n";
+        if (i < 2) cout << "   ---+----+---\n";
     }
     cout << "\n";
 }

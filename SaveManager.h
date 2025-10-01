@@ -1,4 +1,6 @@
-#pragma once
+#ifndef SAVE_MANAGER_H
+#define SAVE_MANAGER_H
+
 #include <string>
 #include <unordered_map>
 #include <optional>
@@ -21,3 +23,5 @@ namespace SaveSystem {
     bool Save(const std::string& slot, const GameState& gs, std::string* outErr=nullptr);
     std::optional<GameState> Load(const std::string& slot, std::string* outErr=nullptr);
 }
+
+#endif // SAVE_MANAGER_H
