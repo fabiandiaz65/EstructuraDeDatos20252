@@ -1,24 +1,17 @@
 {
-    "version": "2.0.0",
-    "tasks": [
-        {
-            "label": "Compilar Triqui",
-            "type": "shell",
-            "command": "g++",
-            "args": [
-                "-std=c++11",
-                "EstructuraDeDatos20252\\main.cpp",
-                "EstructuraDeDatos20252\\juego.cpp",
-                "EstructuraDeDatos20252\\tablero.cpp",
-                "EstructuraDeDatos20252\\jugador.cpp",
-                "-o",
-                "triqui.exe"
-            ],
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            },
-            "problemMatcher": ["$gcc"]
-        }
-    ]
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Compilar (todos los .cpp)",
+      "type": "shell",
+      "command": "g++",
+      "args": [
+        "-g", "-std=c++17", "-Wall",
+        "main.cpp", "tablero.cpp", "jugador.cpp", "SaveManager.cpp", "juego.cpp",
+        "-o", "triqui.exe"
+      ],
+      "group": { "kind": "build", "isDefault": true },
+      "problemMatcher": ["$gcc"]
+    }
+  ]
 }
