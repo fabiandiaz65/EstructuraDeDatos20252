@@ -4,15 +4,15 @@
 #include <string>
 using namespace std;
 
-class jugador{
+class Jugador {
 private:
     string nombre;
-    char simbolo; // 'X' o 'O'
+    char ficha; // 'X' o 'O'
 
 public:
-    jugador(const string& nombre, char simbolo);
-
-    string Nombrej() const;
-    char Simboloj() const;
+    Jugador(const string& nombre, char ficha);
+    string getNombre() const;
+    char getFicha() const;
 };
+
 #endif // JUGADOR_H

@@ -1,11 +1,11 @@
 #include "jugador.h"
 
-jugador::jugador(const string& nombre, char simbolo) : nombre(nombre), simbolo(simbolo) {}
+Jugador::Jugador(const string& nombre, char ficha) : nombre(nombre), ficha(ficha) {}
 
-string jugador::Nombrej() const {
+string Jugador::getNombre() const {
     return nombre;
 }
 
-char jugador::Simboloj() const {
-    return simbolo;
+char Jugador::getFicha() const {
+    return ficha;
 }

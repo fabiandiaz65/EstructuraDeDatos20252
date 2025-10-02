@@ -1,18 +1,21 @@
 #ifndef TABLERO_H
 #define TABLERO_H
 
-class tablero
-{
+#include <string>
+
+class Tablero {
 private:
-    char grid[3][3]; // 3x3 fija
+    char casillas[3][3]; // Matriz para el tablero
+
 public:
-    tablero();
-    void mostrarTablero() const;
-    bool marcarCasilla(int fila, int columna, char jugador);
-    bool verificarGanador(char jugador) const;
-    bool tableroLleno() const;
-    void reiniciarTablero();
+    Tablero(); // Constructor
+    void mostrar() const; // Muestra el tablero
+    bool colocarFicha(int fila, int columna, char ficha); // Coloca ficha en el tablero
+    bool estaCompleto() const; // Verifica si el tablero está lleno
+    char verificarGanador() const; // Verifica si hay ganador
+    void reiniciar(); // Reinicia el tablero
+    bool guardarTablero(std::ofstream& archivo) const;
+    bool cargarTablero(std::ifstream& archivo);
 };
 
 #endif // TABLERO_H
-
