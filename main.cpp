@@ -19,7 +19,9 @@ int main() {
             cout << "Partida cargada correctamente.\n";
         else
             cout << "No se pudo cargar la partida.\n";
-    }
+    }   
+
+    
     partida.iniciarJuego();
     partida.guardarPartida("partida.txt");
 
